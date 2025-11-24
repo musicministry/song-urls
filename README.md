@@ -7,7 +7,7 @@ This repository contains video recordings, mostly from [YouTube](https://www.you
 
 Inclusion here does not indicate personal endorsements of any kind for any YouTube channel, publishing company, or any of the music herein. All music rights belong to the composer and/or publishing company unless otherwise noted in the video. I am not responsible for any copyright violations made by any content creator or video poster. Videos found to be in violation of copyright laws or YouTube terms of service are usually taken down by YouTube. These lists will be updated whenever that is found to have happened.
 
-Entries are provided in `key: value` YAML format, with the name of the song as the key and the corresponding video URL as the value. When multiple versions of a song exist, such as the same text put to different melodies or multiple songs by different composers having the same name, the key includes either the hymn tune or the composer's last name, as appropriate. Psalms and other music corresponding to Biblical passages generally include the scripture citation (book chapter:verse) corresponding to the refrain. For example:
+Entries are provided in `key: value` YAML format, with the name of the song as the key and the corresponding video URL as the value. When multiple versions of a song exist, such as the same text put to different melodies or multiple songs by different composers having the same name, the key includes either the hymn tune or the composer's last name, as appropriate. Psalms and other music corresponding to Bible passages generally include the scripture citation (book chapter:verse) corresponding to the refrain. For example:
 
 ```yaml
 luke-1-my-soul-rejoices: https://www.youtube.com/watch?v=u9wHr_DPUhY
