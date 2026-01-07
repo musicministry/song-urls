@@ -34,7 +34,7 @@ Also included here is a Python package to look up hymn numbers from GIA's Gather
 
 ## Installation
 ```bash
-pip install git+https://github.com/your-username/hymnal-data.git
+pip install git+https://github.com/your-username/song-urls.git
 ```
 
 ## Usage
