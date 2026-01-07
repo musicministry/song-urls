@@ -29,3 +29,21 @@ christ-the-savior:
 ```
 
 Both files are added to and updated regularly as needed.
+
+Also included here is a Python package to look up hymn numbers from GIA's Gather hymnal, with others to implemented in the future. Instructions are as follows:
+
+## Installation
+```bash
+pip install git+https://github.com/your-username/hymnal-data.git
+```
+
+## Usage
+```python
+from gather import hymns, get_hymn_number, search_hymns
+
+# Get hymn number
+number = get_hymn_number('A Hymn of Glory Let Us Sing!')
+
+# Search hymns
+results = search_hymns('Glory')
+```
