@@ -1,60 +1,89 @@
+# =========================================================================== #
+# parse_gather_index_pdf.py
+#
+# This script, created by claude.ai, parses the original Gather index in PDF
+# format to create a Python dictionary with the song name as the key and the
+# number as the value. This dictionary is written to file `gather.py` along
+# with some utility functions for querying the dictionary.
+#
+# This script was mostly successful, but parsing PDF files is tricky and, so
+# the output was imperfect. Entry order is preserved to facilitate manual
+# review and correction. Use of `gather_index_txt.py`, which had a much higher
+# success rate, is recommended instead of this script.
+# 
+# =========================================================================== #
+
 import re
 import PyPDF2
+from collections import OrderedDict
 
-def parse_hymnal_index_robust(pdf_path):
+def parse_hymnal_index_preserve_order(pdf_path):
     """
-    Parse hymnal index PDF with better handling of multi-line entries.
+    Parse hymnal index PDF and preserve original order.
+    Returns OrderedDict to maintain sequence.
     """
     
-    hymns = {}
+    # Use OrderedDict to preserve insertion order
+    hymns = OrderedDict()
     
     with open(pdf_path, 'rb') as file:
         pdf_reader = PyPDF2.PdfReader(file)
         
-        for page in pdf_reader.pages:
+        for page_num, page in enumerate(pdf_reader.pages):
             text = page.extract_text()
             
-            # Remove headers and footers
-            text = re.sub(r'Index of First Lines.*?continued', '', text, flags=re.IGNORECASE)
-            text = re.sub(r'^\d{3,4}$', '', text, flags=re.MULTILINE)  # Remove page numbers
+            # Split into lines
+            lines = text.split('\n')
             
-            # Find all entries: number followed by text
-            # Pattern matches: " 664 A Celtic Rune"
-            pattern = r'\s+(\d+)\s+([^\d\n][^\n]*?)(?=\s+\d+\s+|\Z)'
-            
-            matches = re.finditer(pattern, text, re.MULTILINE | re.DOTALL)
-            
-            for match in matches:
-                number = int(match.group(1))
-                title = match.group(2).strip()
-                
-                # Clean up title
-                # Remove newlines within title
-                title = ' '.join(title.split())
-                
-                # Skip if title looks like a header
-                if 'Index' in title or 'continued' in title.lower():
+            for line in lines:
+                # Skip headers and page numbers
+                if ('Index of First Lines' in line or 
+                    'continued' in line.lower() or
+                    'Acknowledgements' in line):
                     continue
                 
-                hymns[title] = number
+                # Skip if line is just a number (page number)
+                if line.strip().isdigit() and len(line.strip()) <= 4:
+                    continue
+                
+                # Skip empty lines
+                if not line.strip():
+                    continue
+                
+                # Pattern: number followed by title
+                match = re.match(r'^\s*(\d+)\s+(.+)$', line.strip())
+                
+                if match:
+                    number = int(match.group(1))
+                    title = match.group(2).strip()
+                    
+                    # Store in order encountered
+                    hymns[title] = number
     
     return hymns
 
 
-def save_to_python_file(hymns_dict, output_path='gather.py'):
-    """Save hymns dictionary as a Python file."""
+def save_to_file_preserve_order(hymns_dict, output_path='hymns_data.py'):
+    """
+    Save hymns dictionary to Python file in original order.
+    Adds line numbers as comments for easy manual correction.
+    """
     
     with open(output_path, 'w', encoding='utf-8') as f:
-        f.write('"""Hymnal Index - Auto-generated"""\n\n')
+        f.write('"""Hymnal Index - Auto-generated"""\n')
+        f.write('# Entries are in the same order as the original PDF\n')
+        f.write('# Line numbers added as comments for manual correction\n\n')
         f.write('hymns = {\n')
         
-        for title, number in sorted(hymns_dict.items(), key=lambda x: x[1]):
+        for i, (title, number) in enumerate(hymns_dict.items(), start=1):
+            # Escape quotes in titles
             title_escaped = title.replace("'", "\\'")
-            f.write(f"    '{title_escaped}': {number},\n")
+            # Add line number as comment
+            f.write(f"    '{title_escaped}': {number},  # Line {i}\n")
         
         f.write('}\n\n')
         
-        # Add helper function
+        # Add helper functions
         f.write('def get_hymn_number(title):\n')
         f.write('    """Get hymn number by title."""\n')
         f.write('    return hymns.get(title)\n\n')
@@ -67,28 +96,18 @@ def save_to_python_file(hymns_dict, output_path='gather.py'):
 
 
 if __name__ == '__main__':
-    import sys
-    
-    # Get PDF path from command line or use default
-    pdf_path = sys.argv[1] if len(sys.argv) > 1 else '2_G3_Indexes.pdf'
+    pdf_path = 'gather3_index.pdf'
     
     print(f"Parsing {pdf_path}...")
-    hymns = parse_hymnal_index_robust(pdf_path)
+    hymns = parse_hymnal_index_preserve_order(pdf_path)
     
     print(f"✓ Parsed {len(hymns)} hymns")
     
-    # Show sample entries
-    print("\nSample entries:")
-    for title, number in list(hymns.items())[:10]:
-        print(f"  {number}: {title}")
-    
-    # Save to file
+    # Save to file in original order
     output_path = 'gather.py'
-    save_to_python_file(hymns, output_path)
-    print(f"\n✓ Saved to {output_path}")
+    save_to_file_preserve_order(hymns, output_path)
+    print(f"✓ Saved to {output_path} (in original order)")
     
-    # Test the output
-    print("\nTesting import...")
-    exec(open(output_path).read())
-    print(f"  hymns dictionary has {len(hymns)} entries")
-    print(f"  'A Hymn of Glory Let Us Sing!' = {hymns.get('A Hymn of Glory Let Us Sing!')}")
+    print("\nFirst 10 entries:")
+    for i, (title, number) in enumerate(list(hymns.items())[:10], 1):
+        print(f"  {i}. {number}: {title}")
