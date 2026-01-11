@@ -1,44 +1,46 @@
 # Song URLs
 
-This repository contains video recordings, mostly from [YouTube](https://www.youtube.com), for hymns, psalms, and service music solely for rehearsal purposes:
+This repository contains video recordings, mostly from [YouTube](https://www.youtube.com), for hymns, psalms, and service music solely for rehearsal purposes. This branch, `gather`, is unique to \[GIA\](<https://giamusic.com/sacred-music>)'s: [*Gather Third Edition*](https://giamusic.com/hymnals-gather-3) hymnal.
 
-- `hymns.yml` contains **hymns**, **songs**, **psalms**, and **anthems**
-- `mass-settings.yml` contains **parts of the Mass** and other **service music**
+### `gather.yml`
 
-Inclusion here does not indicate personal endorsements of any kind for any YouTube channel, publishing company, or any of the music herein. All music rights belong to the composer and/or publishing company unless otherwise noted in the video. I am not responsible for any copyright violations made by any content creator or video poster. Videos found to be in violation of copyright laws or YouTube terms of service are usually taken down by YouTube. These lists will be updated whenever that is found to have happened.
+This YAML file contains the full *Gather* alphabetized index, with each song title converted to hyphenated-lowercase format as the first-level key. Each song then contains a dictionary that includes the original song title from the index (`original_title`), the song number from the hymnal (`number`), and a URL[^1] for a sample YouTube video (`url`).
 
-Entries are provided in `key: value` YAML format, with the name of the song as the key and the corresponding video URL as the value. When multiple versions of a song exist, such as the same text put to different melodies or multiple songs by different composers having the same name, the key includes either the hymn tune or the composer's last name, as appropriate. Psalms and other music corresponding to Bible passages generally include the scripture citation (book chapter:verse) corresponding to the refrain. For example:
+[^1]: URLs are manually populated as needed. Not all songs have URLS, but all have a `url` key as a placeholder.
 
-```yaml
-luke-1-my-soul-rejoices: https://www.youtube.com/watch?v=u9wHr_DPUhY
+For example, the hymn "A Hymn of Glory Let Us Sing!" is keyed `a-hymn-of-glory-let-us-sing` and contains the following:
+
+``` yaml
+a-hymn-of-glory-let-us-sing:
+  number: 545
+  original_title: A Hymn of Glory Let Us Sing!
+  url: https://www.youtube.com/...
 ```
 
-Mass parts are listed separately for each mass setting with the name of the mass setting as the top-level key and the mass parts nested beneath. For example:
+### `mass-settings.yml`
 
-```yaml
-christ-the-savior:
-    composer: "Dan Schutte"
-    kyrie: https://youtu.be/-WKUvor5b0U?list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    gloria: https://www.youtube.com/watch?v=UwHpbRNYDyw&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    holy: https://www.youtube.com/watch?v=a7RAweDJUPA&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    memorial-acclamation-a: https://www.youtube.com/watch?v=tNKvk9Kn70Y&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    memorial-acclamation-b: https://www.youtube.com/watch?v=nsGftHkvoHk&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    memorial-acclamation-c: https://www.youtube.com/watch?v=pNoteywgi6M&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    amen: https://www.youtube.com/watch?v=iSaIKVjsEjk&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
-    lamb-of-god: https://www.youtube.com/watch?v=_1_sN3o9f0c&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
+This YAML file contains a collection of Mass settings and parts, some of which are in *Gather*, others of which are not. Dictionary structure is the same as above; for example:
+
+``` yaml
+christ-the-savior-gloria:
+  original_title: 'Mass of Christ the Savior: Gloria'
+  number: NA
+  URL: https://www.youtube.com/...
 ```
 
-Both files are added to and updated regularly as needed.
+### `gather` module
 
-Also included here is a Python package to look up hymn numbers from GIA's Gather hymnal, with others to implemented in the future. Instructions are as follows:
+Also included here is a Python package to look up hymn numbers from GIA's Gather hymnal:
 
-## Installation
-```bash
-pip install git+https://github.com/your-username/song-urls.git
+#### Installation
+
+``` bash
+pip install git+https://github.com/your-username/song-urls.git@gather
 ```
 
-## Usage
-```python
+#### Usage
+
+``` python
 from gather import hymns, get_hymn_number, search_hymns
 
 # Get hymn number
@@ -47,3 +49,15 @@ number = get_hymn_number('A Hymn of Glory Let Us Sing!')
 # Search hymns
 results = search_hymns('Glory')
 ```
+
+### *Gather* Index Creation
+
+`gather3_index.pdf` is the original alphabetized index provided by GIA (specifically, the "Index of First Lines and Common Titles."). The [claude.ai](https://claude.ai/) Sonnet 4.5 large language model (LLM) was used to extract the content of the PDF into plain text and create functions for parsing the index into Python dictionaries. These functions and the plain-text output are found in the executable script `parse_gather_index_txt.py`. Running this script produced a cleaned[^2] and formatted YAML where each song title is a key and the song number is the value. This can be found in `gather-index.yml`.
+
+[^2]: Mostly clean. Some manual revision was needed, but very little.
+
+Lastly, the `gather-index.yml` structure was expanded into the full `gather.yml` [described above](#gatheryml).
+
+### Disclaimer
+
+Inclusion here does not indicate personal endorsements of any kind for any YouTube channel, publishing company, or any of the music herein. All music rights belong to the composer and/or publishing company unless otherwise noted in the video. I am not responsible for any copyright violations made by any content creator or video poster. Videos found to be in violation of copyright laws or YouTube terms of service are usually taken down by YouTube. These lists will be updated whenever that is found to have happened.
