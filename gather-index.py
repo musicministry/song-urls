@@ -904,7 +904,6 @@ hymns = {
     "Words of Everlasting Life - Psalm 19": 32,
     "World Peace Prayer": 827,
     "Ye Watchers and Ye Holy Ones": 882,
-    "Yo Soy el Pan de Vida / I Am the Bread of Life": 945,
     "You are salt for the earth": 734,
     "You Are All I Want": 726,
     "You Are All We Have": 586,
