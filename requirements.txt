@@ -1,3 +1,6 @@
+numbr==2.0.6
 PyPDF2==3.0.1
 PyYAML==6.0.3
+RapidFuzz==3.14.3
+titlecase==2.4.1
 Unidecode==1.4.0
