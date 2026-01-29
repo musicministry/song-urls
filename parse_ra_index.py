@@ -1,7 +1,9 @@
 import re
 import sys
 import argparse
+from numbr import Cast as num
 from datetime import datetime
+from titlecase import titlecase
 
 def parse_ra_index_with_year(year):
     """
@@ -201,7 +203,19 @@ November 26 152"""
             
             # Join accumulated celebration lines
             celebration = ' '.join(current_celebration)
+
+            # Modify key to remove leading 'The' and 'At the'
+            if celebration.startswith('The '):
+                celebration = celebration[4:]
+            celebration = celebration.replace('At the ', '')
             
+            # Convert ordinal numbers to words
+            try:
+                newnum = num(celebration[:4], target='Ordinal Word')
+                celebration = titlecase(newnum) + celebration[4:]
+            except ValueError:
+                pass
+
             # Create key
             key = f"{date_with_year} - {celebration}"
             ra_index[key] = page
