@@ -1,11 +1,12 @@
 import re
 import sys
+import yaml
 import argparse
 from numbr import Cast as num
 from datetime import datetime
 from titlecase import titlecase
 
-def parse_ra_index_with_year(year):
+def parse_ra_index(year):
     """
     Parse from the provided text content with year assignment.
     
@@ -229,10 +230,15 @@ November 26 152"""
     return ra_index
 
 
-def save_ra_index(ra_dict, output_path='ra-index.py'):
+def save_ra_index(ra_dict, output_path='ra-index'):
     """Save RA index dictionary to Python file."""
     
-    with open(output_path, 'w', encoding='utf-8') as f:
+    # Write to a YAML file
+    with open(f'{output_path}.yml', 'w', encoding='utf-8') as f:
+        yaml.dump(ra_dict, f)
+
+    # Write to a Python file with helper functions
+    with open(f'{output_path}.py', 'w', encoding='utf-8') as f:
         f.write('"""Respond & Acclaim Index"""\n\n')
         f.write('ra_index = {\n')
         
@@ -264,8 +270,8 @@ if __name__ == '__main__':
     )
     parser.add_argument(
         '-o', '--output',
-        default='ra-index.py',
-        help='Output file path (default: ra-index.py)'
+        default='ra-index',
+        help='Output file path (default: ra-index)'
     )
     
     args = parser.parse_args()
@@ -275,7 +281,7 @@ if __name__ == '__main__':
     print(f"  January onwards: {args.year}")
     
     # Parse with year
-    ra_dict = parse_ra_index_with_year(args.year)
+    ra_dict = parse_ra_index(args.year)
     
     print(f"\n✓ Parsed {len(ra_dict)} entries")
     
