@@ -195,12 +195,27 @@ November 26 152"""
             date = date_page_match.group(1)
             page = int(date_page_match.group(2))
             
-            # Determine which year to use
-            month = date.split()[0]
-            if month in previous_year_months:
-                date_with_year = f"{date}, {previous_year}"
+            # Parse and zero-pad the date(s)
+            # Handle "May 14 or May 17" format
+            if ' or ' in date:
+                parts = date.split(' or ')
+                formatted_parts = []
+                for part in parts:
+                    month, day = part.strip().split()
+                    day_padded = day.zfill(2)
+                    formatted_parts.append(f"{month} {day_padded}")
+                date_formatted = ' or '.join(formatted_parts)
             else:
-                date_with_year = f"{date}, {year}"
+                month, day = date.split()
+                day_padded = day.zfill(2)
+                date_formatted = f"{month} {day_padded}"
+
+            # Determine which year to use
+            month_name = date_formatted.split()[0]
+            if month_name in previous_year_months:
+                date_with_year = f"{date_formatted}, {previous_year}"
+            else:
+                date_with_year = f"{date_formatted}, {year}"
             
             # Join accumulated celebration lines
             celebration = ' '.join(current_celebration)
