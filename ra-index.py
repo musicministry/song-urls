@@ -1,6 +1,6 @@
 """Respond & Acclaim Index"""
 
-ra_index = {
+index = {
     "November 30, 2025 - First Sunday of Advent": 4,
     "December 07, 2025 - Second Sunday of Advent": 6,
     "December 08, 2025 - Immaculate Conception of the Blessed Virgin Mary": 8,
@@ -73,10 +73,131 @@ ra_index = {
 
 def get_page(date_celebration):
     """Get page number by date and celebration."""
-    return ra_index.get(date_celebration)
+    return index.get(date_celebration)
 
 def search_celebration(search_term):
     """Search for celebrations by partial name match."""
     search_lower = search_term.lower()
-    return {k: v for k, v in ra_index.items()
+    return {k: v for k, v in index.items()
             if search_lower in k.lower()}
+
+def get_page_fuzzy(date_obj, celebration_name, threshold=70):
+    """
+    Get page number using fuzzy matching on celebration name.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+        celebration_name: Name of the celebration (can be partial or slightly different)
+        threshold: Minimum similarity score (0-100, default 70)
+    
+    Returns:
+        tuple: (page_number, matched_key, score) or (None, None, 0) if no match
+    
+    Example:
+        >>> get_page_fuzzy(date(2026, 1, 4), "Epiphany")
+        (28, "January 04, 2026 - The Epiphany of the Lord", 100)
+    """
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    # Filter to only entries for this date
+    candidates = {k: v for k, v in index.items() if k.startswith(date_str)}
+    
+    if not candidates:
+        return None, None, 0
+    
+    # If only one entry for this date, return it (common case)
+    if len(candidates) == 1:
+        key, page = list(candidates.items())[0]
+        return page, key, 100
+    
+    # Multiple entries for this date - use fuzzy matching on celebration part
+    # Extract just the celebration names (part after " - ")
+    candidate_celebrations = {k: k.split(" - ", 1)[1] for k in candidates.keys()}
+    
+    # Find best match
+    result = process.extractOne(
+        celebration_name,
+        candidate_celebrations.values(),
+        scorer=fuzz.ratio,
+        score_cutoff=threshold
+    )
+    
+    if result:
+        matched_celebration, score = result[0], result[1]
+        
+        # Find the original key
+        for key, celebration in candidate_celebrations.items():
+            if celebration == matched_celebration:
+                return candidates[key], key, score
+    
+    return None, None, 0
+
+def get_page_by_date(date_obj, celebration_substring="", fuzzy=False, threshold=70):
+    """
+    Get page number using a datetime object.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+        celebration_substring: Substring or full name to match
+        fuzzy: If True, use fuzzy matching; if False, use exact substring match
+        threshold: Minimum similarity score for fuzzy matching (0-100)
+    
+    Returns:
+        int: Page number, or None if not found
+    
+    Examples:
+        >>> # Exact substring match
+        >>> get_page_by_date(date(2026, 1, 4), "Epiphany")
+        28
+        
+        >>> # Fuzzy match (handles typos, variations)
+        >>> get_page_by_date(date(2026, 1, 4), "Epifany", fuzzy=True)
+        28
+    """
+    if fuzzy and celebration_substring:
+        page, _, _ = get_page_fuzzy(date_obj, celebration_substring, threshold)
+        return page
+    
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    if celebration_substring:
+        # Search for entries matching this date and celebration
+        for key, page in index.items():
+            if key.startswith(date_str) and celebration_substring.lower() in key.lower():
+                return page
+    else:
+        # Return first entry for this date
+        for key, page in index.items():
+            if key.startswith(date_str):
+                return page
+    
+    return None
+
+def get_all_pages_for_date(date_obj):
+    """
+    Get all entries for a specific date.
+    Useful when you need to see all options.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+    
+    Returns:
+        dict: {celebration_name: page_number}
+    
+    Example:
+        >>> get_all_pages_for_date(date(2025, 12, 25))
+        {
+            'The Nativity of the Lord (Christmas): At the Mass during the Night': 18,
+            'The Nativity of the Lord (Christmas): At the Mass at Dawn': 20,
+            'The Nativity of the Lord (Christmas): At the Mass during the Day': 22
+        }
+    """
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    results = {}
+    for key, page in index.items():
+        if key.startswith(date_str):
+            celebration = key.split(" - ", 1)[1]
+            results[celebration] = page
+    
+    return results
