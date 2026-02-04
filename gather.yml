@@ -266,7 +266,7 @@ be-not-afraid-taize:
 be-with-me-psalm-91:
     number: 65
     original_title: Be with Me - Psalm 91
-    url: null
+    url: https://www.youtube.com/watch?v=rV0ZuTeNqR0
 before-the-ending-of-the-day:
     number: 22
     original_title: Before the ending of the day
@@ -817,7 +817,7 @@ gather-us-in:
 gather-your-people-alonso:
     number: 489
     original_title: Gather your people (Alonso)
-    url: null
+    url: https://www.youtube.com/watch?v=bZnC7oGEbC8
 gather-your-people-hurd:
     number: 837
     original_title: Gather Your People (Hurd)
@@ -1828,10 +1828,14 @@ may-we-find-richness:
     number: 806
     original_title: May we find richness
     url: null
-merciful-god:
+merciful-god-ash-wednesday:
     number: 489
     original_title: Merciful God
-    url: null
+    url: https://www.youtube.com/watch?v=bZnC7oGEbC8
+merciful-god-lent-gathering:
+    number: 489
+    original_title: Merciful God
+    url: https://www.youtube.com/watch?v=TlV3eGUHDp0
 mercy-o-god:
     number: 480
     original_title: Mercy, O God
@@ -2568,7 +2572,7 @@ psalm-89-for-ever-i-will-sing:
 psalm-91-be-with-me:
     number: 65
     original_title: 'Psalm 91: Be with Me'
-    url: null
+    url: https://www.youtube.com/watch?v=rV0ZuTeNqR0
 psalm-95-if-today-you-hear-gods-voice:
     number: 33
     original_title: 'Psalm 95: If Today You Hear God''s Voice'
@@ -2618,7 +2622,7 @@ rejoice-the-lord-is-king:
 remember-you-are-dust:
     number: 469
     original_title: Remember You Are Dust
-    url: null
+    url: https://www.youtube.com/watch?v=JOPsBXLjNc0
 remember-your-love:
     number: 961
     original_title: Remember Your Love
@@ -2721,7 +2725,7 @@ shepherd-of-souls:
 sign-us-with-ashes:
     number: 489
     original_title: Sign us with ashes
-    url: null
+    url: https://www.youtube.com/watch?v=bZnC7oGEbC8
 silent-in-the-chill-of-midnight:
     number: 432
     original_title: Silent, in the chill of midnight
@@ -3260,7 +3264,7 @@ transform-us:
 tree-of-life:
     number: 475
     original_title: Tree of Life
-    url: https://www.youtube.com/watch?v=UlKXleHakLU
+    url: https://www.youtube.com/watch?v=XFwJIGPO-gM
 tu-tienes-senor:
     number: 32
     original_title: "T\xFA tienes, Se\xF1or"
@@ -3268,7 +3272,7 @@ tu-tienes-senor:
 turn-away-from-sin:
     number: 469
     original_title: Turn away from sin
-    url: null
+    url: https://www.youtube.com/watch?v=JOPsBXLjNc0
 turn-my-heart-o-god:
     number: 660
     original_title: Turn My Heart, O God
