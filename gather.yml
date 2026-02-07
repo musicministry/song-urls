@@ -140,6 +140,10 @@ amen-el-cuerpo-de-cristo:
     number: 912
     original_title: "Am\xE9n. El Cuerpo de Cristo"
     url: null
+am-n-el-cuerpo-de-cristo:
+    number: 912
+    original_title: "Am\xE9n. El Cuerpo de Cristo"
+    url: null
 america-the-beautiful:
     number: 984
     original_title: America the Beautiful
@@ -212,7 +216,15 @@ ave-maria-chant:
     number: 887
     original_title: "Ave Mar\xEDa (Chant)"
     url: https://www.youtube.com/watch?v=LUPZSZfPZvg
+ave-mar-a-chant:
+    number: 887
+    original_title: "Ave Mar\xEDa (Chant)"
+    url: https://www.youtube.com/watch?v=LUPZSZfPZvg
 ave-maria-kantor:
+    number: 891
+    original_title: "Ave Mar\xEDa (Kantor)"
+    url: null
+ave-mar-a-kantor:
     number: 891
     original_title: "Ave Mar\xEDa (Kantor)"
     url: null
@@ -260,6 +272,10 @@ be-not-afraid-dufford:
     original_title: Be Not Afraid (Dufford)
     url: https://www.youtube.com/watch?v=SYlQhi2l7-Q
 be-not-afraid-taize:
+    number: 516
+    original_title: "Be Not Afraid (Taiz\xE9)"
+    url: null
+be-not-afraid-taiz:
     number: 516
     original_title: "Be Not Afraid (Taiz\xE9)"
     url: null
@@ -842,6 +858,10 @@ gloria-gloria:
     number: 426
     original_title: "Gl\xF3ria, Gl\xF3ria"
     url: null
+gl-ria-gl-ia:
+    number: 426
+    original_title: "Gl\xF3ria, Gl\xF3ria"
+    url: null
 glory-and-praise-to-our-god:
     number: 606
     original_title: Glory and Praise to Our God
@@ -1010,6 +1030,10 @@ hail-queen-of-heaven:
     original_title: Hail, Queen of Heaven
     url: null
 hail-queen-of-heaven-salve-regina:
+    number: 880
+    original_title: "Hail, Queen of Heaven / Salve, Reg\xEDna"
+    url: null
+hail-queen-of-heaven-salve-reg-na:
     number: 880
     original_title: "Hail, Queen of Heaven / Salve, Reg\xEDna"
     url: null
@@ -1328,7 +1352,15 @@ in-paradisum:
     number: 977
     original_title: "In Parad\xEDsum"
     url: null
+in-parad-sum:
+    number: 977
+    original_title: "In Parad\xEDsum"
+    url: null
 in-paradisum-may-choirs-of-angels:
+    number: 977
+    original_title: "In Parad\xEDsum / May Choirs of Angels"
+    url: null
+in-parad-sum-may-choirs-of-angels:
     number: 977
     original_title: "In Parad\xEDsum / May Choirs of Angels"
     url: null
@@ -1471,6 +1503,10 @@ jubilate-servite:
     number: 618
     original_title: "Jubil\xE1te, S\xE9rvite"
     url: null
+jubil-te-s-rvite:
+    number: 618
+    original_title: "Jubil\xE1te, S\xE9rvite"
+    url: null
 
 # K
 
@@ -1490,7 +1526,15 @@ kyrie-browning:
     number: 472
     original_title: "K\xFDrie (Browning)"
     url: null
+k-rie-browning:
+    number: 472
+    original_title: "K\xFDrie (Browning)"
+    url: null
 kyrie-haugen:
+    number: 490
+    original_title: "K\xFDrie (Haugen)"
+    url: null
+k-rie-haugen:
     number: 490
     original_title: "K\xFDrie (Haugen)"
     url: null
@@ -1501,7 +1545,15 @@ laudate-dominum:
     number: 623
     original_title: "Laud\xE1te D\xF3minum"
     url: null
+laud-te-d-minum:
+    number: 623
+    original_title: "Laud\xE1te D\xF3minum"
+    url: null
 laudate-laudate-dominum:
+    number: 601
+    original_title: "Laud\xE1te, Laud\xE1te D\xF3minum"
+    url: https://www.youtube.com/watch?v=JXWFKSPCJ-4
+laud-te-laud-te-d-minum:
     number: 601
     original_title: "Laud\xE1te, Laud\xE1te D\xF3minum"
     url: https://www.youtube.com/watch?v=JXWFKSPCJ-4
@@ -1725,11 +1777,19 @@ luke-146-55-magnificat:
     number: 101
     original_title: "Luke 1:46-55: Magn\xEDficat"
     url: https://www.youtube.com/watch?v=bpRRvYN3z0I
+luke-146-55-magn-ficat:
+    number: 101
+    original_title: "Luke 1:46-55: Magn\xEDficat"
+    url: https://www.youtube.com/watch?v=bpRRvYN3z0I
 luke-168-79-now-bless-the-god-of-israel:
     number: 103
     original_title: 'Luke 1:68-79: Now Bless the God of Israel'
     url: null
 luke-229-34-nunc-dimittis:
+    number: 104
+    original_title: "Luke 2:29-34: Nunc Dim\xEDttis"
+    url: null
+luke-229-34-nunc-dim-ttis:
     number: 104
     original_title: "Luke 2:29-34: Nunc Dim\xEDttis"
     url: null
@@ -1740,11 +1800,23 @@ magnificat-haas:
     number: 892
     original_title: "Magn\xEDficat (Haas)"
     url: null
+magn-ficat-haas:
+    number: 892
+    original_title: "Magn\xEDficat (Haas)"
+    url: null
 magnificat-luke-146-55-chepponis:
     number: 101
     original_title: "Magn\xEDficat - Luke 1:46-55 (Chepponis)"
     url: https://www.youtube.com/watch?v=bpRRvYN3z0I
+magn-ficat-luke-146-55-chepponis:
+    number: 101
+    original_title: "Magn\xEDficat - Luke 1:46-55 (Chepponis)"
+    url: https://www.youtube.com/watch?v=bpRRvYN3z0I
 magnificat-taize:
+    number: 630
+    original_title: "Magn\xEDficat (Taiz\xE9)"
+    url: null
+magn-ficat-taiz:
     number: 630
     original_title: "Magn\xEDficat (Taiz\xE9)"
     url: null
@@ -1789,6 +1861,10 @@ may-choirs-of-angels:
     original_title: May Choirs of Angels
     url: null
 may-choirs-of-angels-in-paradisum:
+    number: 977
+    original_title: "May Choirs of Angels / In Parad\xEDsum"
+    url: null
+may-choirs-of-angels-in-parad-sum:
     number: 977
     original_title: "May Choirs of Angels / In Parad\xEDsum"
     url: null
@@ -1999,6 +2075,10 @@ nunc-dimittis-luke-229-34:
     number: 104
     original_title: "Nunc Dim\xEDttis - Luke 2:29-34"
     url: null
+nunc-dim-ttis-luke-229-34:
+    number: 104
+    original_title: "Nunc Dim\xEDttis - Luke 2:29-34"
+    url: null
 
 # O
 
@@ -2102,6 +2182,10 @@ o-most-holy-one-o-sanctissima:
     number: 895
     original_title: "O Most Holy One / O Sanct\xEDssima"
     url: https://www.youtube.com/watch?v=RsYGROSwzuo
+o-most-holy-one-o-sanct-ssima:
+    number: 895
+    original_title: "O Most Holy One / O Sanct\xEDssima"
+    url: https://www.youtube.com/watch?v=RsYGROSwzuo
 o-radiant-light:
     number: 13
     original_title: O radiant light
@@ -2114,7 +2198,15 @@ o-sanctissima:
     number: 895
     original_title: "O Sanct\xEDssima"
     url: https://www.youtube.com/watch?v=jyzzKgqecLY
+o-sanct-ssima:
+    number: 895
+    original_title: "O Sanct\xEDssima"
+    url: https://www.youtube.com/watch?v=jyzzKgqecLY
 o-sanctissima-o-most-holy-one:
+    number: 895
+    original_title: "O Sanct\xEDssima / O Most Holy One"
+    url: https://www.youtube.com/watch?v=jyzzKgqecLY
+o-sanct-ssima-o-most-holy-one:
     number: 895
     original_title: "O Sanct\xEDssima / O Most Holy One"
     url: https://www.youtube.com/watch?v=jyzzKgqecLY
@@ -2238,6 +2330,10 @@ pange-lingua-hail-our-saviors-glorious-body:
     original_title: Pange Lingua / Hail Our Savior's Glorious Body
     url: https://www.youtube.com/watch?v=U-AsvDn87fo
 parce-domine:
+    number: 473
+    original_title: "Parce D\xF3mine"
+    url: https://www.youtube.com/watch?v=kxSFG0h7trQ
+parce-d-mine:
     number: 473
     original_title: "Parce D\xF3mine"
     url: https://www.youtube.com/watch?v=kxSFG0h7trQ
@@ -2643,6 +2739,10 @@ resucito:
     number: 535
     original_title: "Resucit\xF3"
     url: null
+resucit:
+    number: 535
+    original_title: "Resucit\xF3"
+    url: null
 return-to-god:
     number: 478
     original_title: Return to God
@@ -2666,7 +2766,15 @@ salve-regina:
     number: 880
     original_title: "Salve, Reg\xEDna"
     url: https://www.youtube.com/watch?v=BbWHW98yxgQ
+salve-reg-na:
+    number: 880
+    original_title: "Salve, Reg\xEDna"
+    url: https://www.youtube.com/watch?v=BbWHW98yxgQ
 salve-regina-hail-queen-of-heaven:
+    number: 880
+    original_title: "Salve, Reg\xEDna / Hail, Queen of Heaven"
+    url: https://www.youtube.com/watch?v=BbWHW98yxgQ
+salve-reg-na-hail-queen-of-heaven:
     number: 880
     original_title: "Salve, Reg\xEDna / Hail, Queen of Heaven"
     url: https://www.youtube.com/watch?v=BbWHW98yxgQ
@@ -2906,6 +3014,10 @@ surrexit-christus:
     number: 529
     original_title: "Surr\xE9xit Christus"
     url: null
+surr-xit-christus:
+    number: 529
+    original_title: "Surr\xE9xit Christus"
+    url: null
 sweet-refreshment:
     number: 899
     original_title: Sweet Refreshment
@@ -3038,6 +3150,10 @@ the-kingdom-of-god-laudate-dominum:
     original_title: The Kingdom of God (LAUDATE DOMINUM)
     url: https://www.youtube.com/watch?v=Ldg2hxi9Rys
 the-kingdom-of-god-taize:
+    number: 740
+    original_title: "The Kingdom of God (Taiz\xE9)"
+    url: null
+the-kingdom-of-god-taiz:
     number: 740
     original_title: "The Kingdom of God (Taiz\xE9)"
     url: null
@@ -3273,6 +3389,10 @@ tu-tienes-senor:
     number: 32
     original_title: "T\xFA tienes, Se\xF1or"
     url: null
+t-tienes-se-or:
+    number: 32
+    original_title: "T\xFA tienes, Se\xF1or"
+    url: null
 turn-away-from-sin:
     number: 469
     original_title: Turn away from sin
@@ -3296,7 +3416,15 @@ ubi-caritas-chant:
     number: 705
     original_title: "Ubi C\xE1ritas (Chant)"
     url: https://www.youtube.com/watch?v=ej8VvT3g2MA
+ubi-c-ritas-chant:
+    number: 705
+    original_title: "Ubi C\xE1ritas (Chant)"
+    url: https://www.youtube.com/watch?v=ej8VvT3g2MA
 ubi-caritas-hurd:
+    number: 696
+    original_title: "Ubi C\xE1ritas (Hurd)"
+    url: https://www.youtube.com/watch?v=kKpwJC9KnQo
+ubi-c-ritas-hurd:
     number: 696
     original_title: "Ubi C\xE1ritas (Hurd)"
     url: https://www.youtube.com/watch?v=kKpwJC9KnQo
@@ -3304,7 +3432,15 @@ ubi-caritas-taize:
     number: 500
     original_title: "Ubi C\xE1ritas (Taiz\xE9)"
     url: https://www.youtube.com/watch?v=z9zvDBPkgOk
+ubi-c-ritas-taiz:
+    number: 500
+    original_title: "Ubi C\xE1ritas (Taiz\xE9)"
+    url: https://www.youtube.com/watch?v=z9zvDBPkgOk
 ubi-caritas-where-true-love-and-charity-are-found-chant:
+    number: 705
+    original_title: "Ubi C\xE1ritas / Where True Love and Charity Are Found (Chant)"
+    url: https://www.youtube.com/watch?v=ej8VvT3g2MA
+ubi-c-ritas-where-true-love-and-charity-are-found-chant:
     number: 705
     original_title: "Ubi C\xE1ritas / Where True Love and Charity Are Found (Chant)"
     url: https://www.youtube.com/watch?v=ej8VvT3g2MA
@@ -3319,7 +3455,15 @@ veni-creator-spiritus:
     number: 558
     original_title: "Veni Cre\xE1tor Sp\xEDritus"
     url: null
+veni-cre-tor-sp-ritus:
+    number: 558
+    original_title: "Veni Cre\xE1tor Sp\xEDritus"
+    url: null
 veni-sancte-spiritus:
+    number: 550
+    original_title: "Veni Sancte Sp\xEDritus"
+    url: null
+veni-sancte-sp-ritus:
     number: 550
     original_title: "Veni Sancte Sp\xEDritus"
     url: null
@@ -3587,6 +3731,10 @@ where-true-love-and-charity-are-found:
     original_title: Where True Love and Charity Are Found
     url: null
 where-true-love-and-charity-are-found-ubi-caritas:
+    number: 705
+    original_title: "Where True Love and Charity Are Found / Ubi C\xE1ritas"
+    url: null
+where-true-love-and-charity-are-found-ubi-c-ritas:
     number: 705
     original_title: "Where True Love and Charity Are Found / Ubi C\xE1ritas"
     url: null
