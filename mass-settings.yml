@@ -33,7 +33,7 @@ mass-of-christ-the-savior-lamb-of-god:
     url: https://www.youtube.com/watch?v=_1_sN3o9f0c&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
 
 # Cantus Missae (Chant Mass)
-# Provided in two formats to support lookup automation
+# Multiple formats to support lookup automation
 cantus-missae-kyrie:
     original_title: Kýrie
     number: 301
@@ -74,42 +74,32 @@ cantus-missae-agnus-dei-b:
     number: 313
     url: https://www.youtube.com/watch?v=JgVQ0SHPeno
 
-cantus-missae-kyrie:
-    original_title: Kýrie
-    number: 301
-    url: https://www.youtube.com/watch?v=9hrbge-40kw
-
-chant-mass-gloria:
-    original_title: Glória
-    number: 302
-    url: https://www.youtube.com/watch?v=JM6qmf_C7pU
-
-chant-mass-sanctus-a:
+cantus-missae-holy-a:
     original_title: Sanctus (A)
     number: 308
     url: https://www.youtube.com/watch?v=0lXqNnO92wA
 
-chant-mass-sanctus-b:
+cantus-missae-holy-b:
     original_title: Sanctus (B)
     number: 308
     url: https://www.youtube.com/watch?v=vfDwbeFKoKc
 
-chant-mass-memorial-acclamation-a:
+cantus-missae-memorial-acclamation-a:
     original_title: Memorial Acclamation A
     number: 309
     url: NA
 
-chant-mass-memorial-acclamation-b:
+cantus-missae-memorial-acclamation-b:
     original_title: Memorial Acclamation B
     number: 309
     url: NA
 
-chant-mass-agnus-dei-a:
+cantus-missae-lamb-of-god-a:
     original_title: Agnus Dei (A)
     number: 313
     url: https://www.youtube.com/watch?v=290y-xaTA3s
 
-chant-mass-agnus-dei-b:
+cantus-missae-lamb-of-god-b:
     original_title: Agnus Dei (B)
     number: 313
     url: https://www.youtube.com/watch?v=JgVQ0SHPeno
