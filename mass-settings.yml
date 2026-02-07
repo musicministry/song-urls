@@ -32,6 +32,47 @@ mass-of-christ-the-savior-lamb-of-god:
     number: NA
     url: https://www.youtube.com/watch?v=_1_sN3o9f0c&list=OLAK5uy_kQuUStdQWJnmXAvXIIF4QNXVjeqo9r1KQ
 
+# Cantus Missae (Chant Mass)
+cantus-missae-kyrie:
+    original_title: Kýrie
+    number: 301
+    url: https://www.youtube.com/watch?v=9hrbge-40kw
+
+cantus-missae-gloria:
+    original_title: Glória
+    number: 302
+    url: https://www.youtube.com/watch?v=JM6qmf_C7pU
+
+cantus-missae-sanctus-a:
+    original_title: Sanctus (A)
+    number: 308
+    url: https://www.youtube.com/watch?v=0lXqNnO92wA
+
+cantus-missae-sanctus-b:
+    original_title: Sanctus (B)
+    number: 308
+    url: https://www.youtube.com/watch?v=vfDwbeFKoKc
+
+cantus-missae-memorial-acclamation-a:
+    original_title: Memorial Acclamation A
+    number: 309
+    url: NA
+
+cantus-missae-memorial-acclamation-b:
+    original_title: Memorial Acclamation B
+    number: 309
+    url: NA
+
+cantus-missae-agnus-dei-a:
+    original_title: Agnus Dei (A)
+    number: 313
+    url: https://www.youtube.com/watch?v=290y-xaTA3s
+
+cantus-missae-agnus-dei-b:
+    original_title: Agnus Dei (B)
+    number: 313
+    url: https://www.youtube.com/watch?v=JgVQ0SHPeno
+
 # Christmas Carol Mass (Kevin Weed)
 christmas-carol-mass-kyrie-ver1:
     original_title: 'Christmas Carol Mass: Kyrie version 1'
