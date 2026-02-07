@@ -44,12 +44,12 @@ cantus-missae-gloria:
     number: 302
     url: https://www.youtube.com/watch?v=JM6qmf_C7pU
 
-cantus-missae-sanctus-a:
+cantus-missae-a-sanctus:
     original_title: Sanctus (A)
     number: 308
     url: https://www.youtube.com/watch?v=0lXqNnO92wA
 
-cantus-missae-sanctus-b:
+cantus-missae-b-sanctus-b:
     original_title: Sanctus (B)
     number: 308
     url: https://www.youtube.com/watch?v=vfDwbeFKoKc
@@ -64,22 +64,22 @@ cantus-missae-memorial-acclamation-b:
     number: 309
     url: NA
 
-cantus-missae-agnus-dei-a:
+cantus-missae-a-agnus-dei:
     original_title: Agnus Dei (A)
     number: 313
     url: https://www.youtube.com/watch?v=290y-xaTA3s
 
-cantus-missae-agnus-dei-b:
+cantus-missae-b-agnus-dei:
     original_title: Agnus Dei (B)
     number: 313
     url: https://www.youtube.com/watch?v=JgVQ0SHPeno
 
-cantus-missae-holy-a:
+cantus-missae-a-holy:
     original_title: Sanctus (A)
     number: 308
     url: https://www.youtube.com/watch?v=0lXqNnO92wA
 
-cantus-missae-holy-b:
+cantus-missae-b-holy:
     original_title: Sanctus (B)
     number: 308
     url: https://www.youtube.com/watch?v=vfDwbeFKoKc
@@ -94,12 +94,12 @@ cantus-missae-memorial-acclamation-b:
     number: 309
     url: NA
 
-cantus-missae-lamb-of-god-a:
+cantus-missae-a-lamb-of-god:
     original_title: Agnus Dei (A)
     number: 313
     url: https://www.youtube.com/watch?v=290y-xaTA3s
 
-cantus-missae-lamb-of-god-b:
+cantus-missae-b-lamb-of-god:
     original_title: Agnus Dei (B)
     number: 313
     url: https://www.youtube.com/watch?v=JgVQ0SHPeno
