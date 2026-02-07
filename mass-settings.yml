@@ -349,6 +349,32 @@ missa-emmanuel-lamb-of-god:
     number: NA
     url: https://youtu.be/iZw5bAd2YYA
 
+# Mass of St. Dymphna
+mass-of-st-dymphna-gloria:
+    original_title: 'Mass of St. Dymphna: Gloria'
+    number: NA
+    url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-holy:
+    original_title: 'Mass of St. Dymphna: Holy'
+    number: NA
+    url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-memorial-acclamation-a:
+    original_title: 'Mass of St. Dymphna: Memorial Acclamation A'
+    number: NA
+    url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-amen:
+    original_title: 'Mass of St. Dymphna: Amen'
+    number: NA
+    url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-lambo-of-god:
+    original_title: 'Mass of St. Dymphna: Lamb of God'
+    number: NA
+    url: https://musicministry.github.io/stegbert/stdymphna.html
+
 # Others
 chant-mass-mode-iii-kyrie:
     original_title: 'Chant Mode III: Kyrie'
