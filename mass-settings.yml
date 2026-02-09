@@ -386,25 +386,50 @@ mass-of-st-dymphna-gloria:
     number: NA
     url: https://musicministry.github.io/stegbert/stdymphna.html
 
+mass-of-st-dymphna-audio-gloria:
+    original_title: 'Mass of St. Dymphna: Gloria'
+    number: NA
+    url: ./_audio/st-dymphna-gloria.mp3
+
 mass-of-st-dymphna-holy:
     original_title: 'Mass of St. Dymphna: Holy'
     number: NA
     url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-audio-holy:
+    original_title: 'Mass of St. Dymphna: Holy'
+    number: NA
+    url: ./_audio/st-dymphna-holy.mp3
 
 mass-of-st-dymphna-memorial-acclamation-a:
     original_title: 'Mass of St. Dymphna: Memorial Acclamation A'
     number: NA
     url: https://musicministry.github.io/stegbert/stdymphna.html
 
+mass-of-st-dymphna-audio-memorial-acclamation-a:
+    original_title: 'Mass of St. Dymphna: Memorial Acclamation A'
+    number: NA
+    url: ./_audio/st-dymphna-memaccA.mp3
+
 mass-of-st-dymphna-amen:
     original_title: 'Mass of St. Dymphna: Amen'
     number: NA
     url: https://musicministry.github.io/stegbert/stdymphna.html
 
+mass-of-st-dymphna-audio-amen:
+    original_title: 'Mass of St. Dymphna: Amen'
+    number: NA
+    url: ./_audio/st-dymphna-amen.mp3
+
 mass-of-st-dymphna-lamb-of-god:
     original_title: 'Mass of St. Dymphna: Lamb of God'
     number: NA
     url: https://musicministry.github.io/stegbert/stdymphna.html
+
+mass-of-st-dymphna-audio-lamb-of-god:
+    original_title: 'Mass of St. Dymphna: Lamb of God'
+    number: NA
+    url: ./_audio/st-dymphna-lambofgod.mp3
 
 # Others
 chant-mass-mode-iii-kyrie:
