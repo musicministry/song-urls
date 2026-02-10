@@ -399,7 +399,7 @@ mass-of-st-dymphna-holy:
 mass-of-st-dymphna-audio-holy:
     original_title: 'Mass of St. Dymphna: Holy'
     number: NA
-    url: ./_audio/st-dymphna-holy.mp3
+    url: ../_audio/st-dymphna-holy.mp3
 
 mass-of-st-dymphna-memorial-acclamation-a:
     original_title: 'Mass of St. Dymphna: Memorial Acclamation A'
