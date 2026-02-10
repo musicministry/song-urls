@@ -409,7 +409,7 @@ mass-of-st-dymphna-memorial-acclamation-a:
 mass-of-st-dymphna-audio-memorial-acclamation-a:
     original_title: 'Mass of St. Dymphna: Memorial Acclamation A'
     number: NA
-    url: ./_audio/st-dymphna-memaccA.mp3
+    url: _audio/st-dymphna-memaccA.mp3
 
 mass-of-st-dymphna-amen:
     original_title: 'Mass of St. Dymphna: Amen'
@@ -419,7 +419,7 @@ mass-of-st-dymphna-amen:
 mass-of-st-dymphna-audio-amen:
     original_title: 'Mass of St. Dymphna: Amen'
     number: NA
-    url: ./_audio/st-dymphna-amen.mp3
+    url: /_audio/st-dymphna-amen.mp3
 
 mass-of-st-dymphna-lamb-of-god:
     original_title: 'Mass of St. Dymphna: Lamb of God'
