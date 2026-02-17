@@ -1,9 +1,13 @@
 import yaml
 import yt_dlp
+import datetime as dt
 from typing import List, Dict
 
 # URL of any video in the YouTube playlist of interest
 playlist_url = "https://www.youtube.com/watch?v=4yPHj2DFoC4&list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+# Year
+year = dt.datetime.today().year
 
 def video_name_psalm(feast, year=None):
     """Return the YouTube video name for the given feast `feast`. If `year` is
@@ -184,7 +188,7 @@ retriever = PlaylistRetriever(playlist_url)
 videos = retriever.get_all_videos(verbose=False)
 
 # Write to file
-video_dict = {i['title'].split('-')[1].strip():i for i in videos[1:]}
+video_dict = {i['title'].split(f'{year} -')[1].strip():i for i in videos[1:]}
 with open('ra-video-urls.yml', 'w') as file:
     yaml.safe_dump(video_dict, file)
 
