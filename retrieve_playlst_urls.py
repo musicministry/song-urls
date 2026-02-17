@@ -186,7 +186,7 @@ videos = retriever.get_all_videos(verbose=False)
 # Write to file
 video_dict = {i['title'].split('-')[1].strip():i for i in videos[1:]}
 with open('ra-video-urls.yml', 'w') as file:
-    yaml.safe_dump(video_dict)
+    yaml.safe_dump(video_dict, file)
 
 # Feast names in YouTube playlist
 video_feasts = list(dict.fromkeys([i['title'].split('-')[1].strip() for i in videos[1:]]))
@@ -292,4 +292,4 @@ feast_mapping = {
 
 # Write to file
 with open('feast-mapping.yml', 'w') as file:
-    yaml.safe_dump(feast_mapping)
+    yaml.safe_dump(feast_mapping, file)
