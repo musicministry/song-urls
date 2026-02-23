@@ -227,8 +227,9 @@ November 26 152"""
             
             # Convert ordinal numbers to words
             try:
-                newnum = num(celebration[:4], target='Ordinal Word')
-                celebration = titlecase(newnum) + celebration[4:]
+                oldnum = celebration.split(' ')[0]
+                newnum = num(oldnum, target='Ordinal Word')
+                celebration = celebration.replace(oldnum, titlecase(newnum))
             except ValueError:
                 pass
 
@@ -397,10 +398,6 @@ def save_ra_index(ra_dict, output_path='ra-index'):
         f.write('    return results\n\n')
 
 
-
-
-
-
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(
         description='Parse Respond & Acclaim index with liturgical year'
@@ -442,4 +439,3 @@ if __name__ == '__main__':
     save_ra_index(ra_dict, 'ra/data')
     print(f"\n✓ Saved to {args.output}")
 
-    
