@@ -133,7 +133,11 @@ class PlaylistRetriever:
                         'url': f"https://www.youtube.com/watch?v={video['id']}",
                         'duration': video.get('duration', 0)
                     }
-                    
+                    # Add 'Psalm' where missing to support automation
+                    # In 2026, only "Psalm" suffixes was missing
+                    if 'Psalm' not in video_data['title'] and 'Gospel Acclamation' not in video_data['title']:
+                        video_data['title'] = video_data['title'] + ' - Psalm'
+
                     videos.append(video_data)
                     
                     if verbose:
